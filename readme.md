@@ -15,6 +15,6 @@ This will run the program every minute, and will prevent the program from runnin
 
 You can then plot the data with Grafana, or any other plotting software.
 
+![Grafana Graph](image-2.png)
 ![Grafana Query](image.png)
-![Alt text](image-1.png)
-
+![Grafana Data Transformation](image-1.png)
