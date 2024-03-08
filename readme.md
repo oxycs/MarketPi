@@ -2,7 +2,7 @@
 
 ## A program to plot the current capacity of the marketplace, inspired by [this post](https://matthew.science/posts/occupancy/).
 
-To use, simply place these files onto a Raspberry Pi with Bluetooth. Before starting the service, the PI needs to be configured to start listening to nearby devices, which can be done with the command `bluetoothctl scan on &`.
+To use, simply place these files onto a Raspberry Pi with Bluetooth. Before starting the service, the Pi needs to be configured to start listening to nearby devices, which can be done with the command `bluetoothctl scan on &`.
 
 Then add the following to your crontab:
 
