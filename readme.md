@@ -11,6 +11,8 @@ To use, simply place these files onto a Raspberry Pi with Bluetooth. Then add th
 ```
 You will also need to install `tcpdump`.
 
+Pair one bluetooth device, like a mouse, and then turn it off.
+
 This will run the program every minute, and will prevent the program from running multiple times at once. It will also run the server, which will allow you to view the data on a webpage.
 
 You can then plot the data with Grafana, or any other plotting software.
