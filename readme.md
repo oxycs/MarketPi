@@ -2,7 +2,9 @@
 
 ## A program to plot the current capacity of the marketplace, inspired by [this post](https://matthew.science/posts/occupancy/).
 
-To use, simply place these files onto a Raspberry Pi with Bluetooth. Then add the following to your crontab:
+To use, simply place these files onto a Raspberry Pi with Bluetooth. Pair one bluetooth device, like a mouse, and then turn it off.
+
+Then add the following to your crontab:
 
 ```
 * * * * * /usr/bin/flock -n /tmp/fcjmain.lockfile /usr/bin/python3 ~/main.py
@@ -10,8 +12,6 @@ To use, simply place these files onto a Raspberry Pi with Bluetooth. Then add th
 * * * * * /usr/bin/flock -n /tmp/fcjserver.lockfile /usr/bin/python3 ~/server.py
 ```
 You will also need to install `tcpdump`.
-
-Pair one bluetooth device, like a mouse, and then turn it off.
 
 This will run the program every minute, and will prevent the program from running multiple times at once. It will also run the server, which will allow you to view the data on a webpage.
 
