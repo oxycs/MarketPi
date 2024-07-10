@@ -4,19 +4,17 @@
 
 To use, simply place these files onto a Raspberry Pi with Bluetooth. Before starting the service, the Pi needs to be configured to start listening to nearby devices, which can be done with the command `bluetoothctl scan on &`.
 
+Make sure to install the `mysql-connector-python` package with `python3 -m pip install mysql-connector-python`.
+
 Then add the following to your crontab:
 
 ```
 * * * * * /usr/bin/flock -n /tmp/fcjmain.lockfile /usr/bin/python3 ~/main.py
-
-* * * * * /usr/bin/flock -n /tmp/fcjserver.lockfile /usr/bin/python3 ~/server.py
 ```
 You will also need to install `tcpdump`.
-
-This will run the program every minute, and will prevent the program from running multiple times at once. It will also run the server, which will allow you to view the data on a webpage.
 
 You can then plot the data with Grafana, or any other plotting software.
 
 ![Grafana Graph](image-2.png)
-![Grafana Query](image.png)
-![Grafana Data Transformation](image-1.png)
+
+See the current installation at https://dining.csc.oxy.edu for the dining hall capacity at Occidental College.
